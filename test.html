@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header {
+            background: #007acc;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #007acc;
+        }
+        .code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            margin: 15px 0;
+        }
+        .button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 10px 10px 0;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .info {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            color: #0d47a1;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📖 Markdown Viewer テストページ</h1>
+        <p>このページは拡張機能のテスト用です。アイコンをクリックしてマークダウン表示を試してください。</p>
+    </div>
+
+    <div class="info">
+        <h3>🔧 テスト手順</h3>
+        <ol>
+            <li>Chrome拡張機能のアイコンをクリック</li>
+            <li>ページがマークダウン形式に変換されることを確認</li>
+            <li>再度アイコンをクリックして元の表示に戻ることを確認</li>
+        </ol>
+    </div>
+
+    <div class="content">
+        <h2>サンプルコンテンツ</h2>
+
+        <p>これは拡張機能のテスト用ページです。以下のような様々なコンテンツ要素を含んでいます：</p>
+
+        <ul>
+            <li>見出し（H1, H2, H3）</li>
+            <li>段落テキスト</li>
+            <li>リスト項目</li>
+            <li>コードブロック</li>
+            <li>テーブル</li>
+        </ul>
+
+        <h3>コード例</h3>
+        <div class="code">// マークダウン変換の例
+const markdown = toMarkdown(extractedContent);
+console.log(markdown);</div>
+
+        <h3>機能テーブル</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>機能</th>
+                    <th>状態</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>コンテンツ抽出</td>
+                    <td>✅ 実装済み</td>
+                    <td>@mizchi/readabilityを使用</td>
+                </tr>
+                <tr>
+                    <td>マークダウン変換</td>
+                    <td>✅ 実装済み</td>
+                    <td>toMarkdown関数を使用</td>
+                </tr>
+                <tr>
+                    <td>UIなし設計</td>
+                    <td>✅ 実装済み</td>
+                    <td>アイコンクリックのみ</td>
+                </tr>
+                <tr>
+                    <td>レスポンシブ表示</td>
+                    <td>✅ 実装済み</td>
+                    <td>CSSでスタイリング</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <blockquote>
+            <p><strong>注意:</strong> この拡張機能は、ウェブページのメインコンテンツを抽出してマークダウン形式で表示します。すべてのウェブサイトで完全に動作するわけではありませんが、記事やドキュメントを中心に設計されています。</p>
+        </blockquote>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <button class="button" onclick="alert('拡張機能のアイコンをクリックしてテストしてください！')">
+                テスト開始
+            </button>
+            <button class="button" onclick="window.location.reload()">
+                ページ再読み込み
+            </button>
+        </div>
+    </div>
+</body>
+</html>
