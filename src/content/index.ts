@@ -1,5 +1,6 @@
 // Content script for Markdown Viewer extension
 import { extract, toMarkdown } from '@mizchi/readability';
+import './index.css';
 
 let isMarkdownViewEnabled = false;
 let originalContent = '';

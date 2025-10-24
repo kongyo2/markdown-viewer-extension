@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run copy-files",
-    "copy-files": "cp manifest.json dist/ && cp -r public/* dist/ 2>/dev/null || copy src\\content\\index.css dist\\content.css",
+    "copy-files": "copy manifest.json dist\\ && xcopy public dist /E /I /Y",
     "preview": "vite preview",
-    "clean": "rm -rf dist"
+    "clean": "rmdir /s /q dist 2>nul || rm -rf dist"
   },
   "dependencies": {
     "@mizchi/readability": "^0.7.7",

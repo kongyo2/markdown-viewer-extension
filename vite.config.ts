@@ -8,7 +8,6 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        manifest: resolve(__dirname, 'manifest.json'),
         content: resolve(__dirname, 'src/content/index.ts'),
         background: resolve(__dirname, 'src/background/index.ts')
       },
