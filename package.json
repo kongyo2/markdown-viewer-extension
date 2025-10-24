@@ -4,8 +4,9 @@
   "description": "Chrome extension that converts any website to markdown view",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run copy-files",
+    "build": "npm run generate-icons && vite build && npm run copy-files",
     "copy-files": "copy manifest.json dist\\ && xcopy public dist /E /I /Y",
+    "generate-icons": "node generate-icons.js",
     "preview": "vite preview",
     "clean": "rmdir /s /q dist 2>nul || rm -rf dist"
   },
@@ -15,6 +16,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/chrome": "^0.0.268",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
